@@ -1,0 +1,31 @@
+.header_con {
+  display: flex;
+  overflow-x: scroll;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0 5px;
+    white-space: nowrap;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .active {
+    color: red;
+  }
+  .label {
+    display: inline-block;
+    background-color: red;
+    margin-top: 2px;
+    height: 2px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
