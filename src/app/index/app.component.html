@@ -1,3 +1,5 @@
 <div>
-  <app-scroll-tab [tabs]="tabs" (tabSelectd)="tabSelected($event)"></app-scroll-tab>
+  <app-scroll-tab [tabs]="tabs" [selectId]="selectId" (tabSelectd)="tabSelected($event)">
+  </app-scroll-tab>
+  <app-swiper [sliders]="sliders"></app-swiper>
 </div>
