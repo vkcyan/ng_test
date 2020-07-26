@@ -1,15 +1,15 @@
 import { Component, ViewChild, ViewChildren } from "@angular/core";
-import { menuInter } from "./components/scroll-tab/scroll-tab.component";
-import { ImageSlider, SwiperComponent } from "./components/swiper/swiper.component";
+import { SwiperComponent, ImageSlider } from "./shared/components/swiper/swiper.component";
+import { menuInter } from "./shared/components/scroll-tab/scroll-tab.component";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
   @ViewChild(SwiperComponent) swiperComponent: SwiperComponent;
   title = "ng-app";
+  username: "";
   selectId = -1;
   tabs: menuInter[] = [
     {

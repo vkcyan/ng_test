@@ -15,8 +15,7 @@ export class ScrollTabComponent implements OnInit, OnChanges, DoCheck {
   }
   @Input() tabs: menuInter[];
   @Input() selectId: number = -1; // 选中菜单
-  @Output()
-  tabSelectd = new EventEmitter();
+  @Output() tabSelectd = new EventEmitter();
   // 此api有点类似于watch的监听函数,父组件传入的数值一旦发生改变都会被这个函数监听,并实时进行数据的回调
   ngOnChanges(changes: SimpleChanges): void {
     console.log("组件数值字变化", changes);
@@ -53,7 +52,7 @@ export class ScrollTabComponent implements OnInit, OnChanges, DoCheck {
   }
   // 页面卸载
   ngOnDestroy(): void {
-    console.log('页面卸载.进行内存的一些清理');
+    console.log("页面卸载.进行内存的一些清理");
   }
   toggleSelect(index: number) {
     this.tabSelectd.emit(index);
