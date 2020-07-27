@@ -23,7 +23,6 @@ export class SwiperComponent implements OnInit {
     this.setintId = setInterval(() => {
       let sliderDom = this.imgSlider.nativeElement;
       this.rd2.setProperty(sliderDom, "scrollLeft", (this.swiperIndex * sliderDom.scrollWidth) / this.sliders.length);
-      console.log("当前下标", this.swiperIndex);
       if (this.swiperIndex >= this.sliders.length - 1) {
         this.swiperIndex = 0;
       } else {
@@ -35,7 +34,7 @@ export class SwiperComponent implements OnInit {
     clearInterval(this.setintId);
   }
   handerScroll(e) {
-    console.log(e);
+    // console.log(e);
   }
 }
 1;

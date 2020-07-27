@@ -26,7 +26,7 @@ export class ScrollTabComponent implements OnInit, OnChanges, DoCheck {
   }
   // 脏值检测 这个挺复杂的
   ngDoCheck(): void {
-    console.log("子组件,脏值检测");
+    // console.log("子组件,脏值检测");
   }
   // 组件内容初始化 组件内容为例如插槽
   ngAfterContentInit(data): void {
@@ -36,7 +36,7 @@ export class ScrollTabComponent implements OnInit, OnChanges, DoCheck {
    * 组件内容脏值检测
    */
   ngAfterContentChecked(): void {
-    console.log("组件内容脏值检测");
+    // console.log("组件内容脏值检测");
   }
   /**
    * 组件包括所有的子组件全部初始化完成
@@ -48,7 +48,7 @@ export class ScrollTabComponent implements OnInit, OnChanges, DoCheck {
    * 组件完成的脏值检测
    */
   ngAfterViewChecked(): void {
-    console.log("子组件视图的脏值检测");
+    // console.log("子组件视图的脏值检测");
   }
   // 页面卸载
   ngOnDestroy(): void {

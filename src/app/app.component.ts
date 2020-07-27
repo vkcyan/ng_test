@@ -75,7 +75,7 @@ export class AppComponent {
   ];
   // 脏值检测
   ngDoCheck(): void {
-    console.log("父组件,脏值检测");
+    // console.log("父组件,脏值检测");
   }
   tabSelected(index) {
     console.log(index);
