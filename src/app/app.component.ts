@@ -9,7 +9,6 @@ import { menuInter } from "./shared/components/scroll-tab/scroll-tab.component";
 export class AppComponent {
   @ViewChild(SwiperComponent) swiperComponent: SwiperComponent;
   title = "ng-app";
-  username: "";
   selectId = -1;
   tabs: menuInter[] = [
     {

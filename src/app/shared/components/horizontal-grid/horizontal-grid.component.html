@@ -1,11 +1,4 @@
-<!-- 传统写法 -->
-<!-- <input type="text" [value]="username" (input)="changeUserName($event)">
-<span>你好:{{ username }}</span> -->
-<!-- 双向绑定语法糖写法 -->
-<!-- <input type="text" [(ngModel)]="username" />
-<span>你好:{{ username }}</span> -->
-
-<!-- 双向绑定简略 -->
-<input type="text" [ngModel]="username" (ngModelChange)="modelUserName($event)" />
-<div>你好:{{ username }}</div>
-{{emojiData}}
+<div appGridItem *ngFor="let item of channels">
+  <img appGridItemImage [imageSize]="'2rem'" [src]="item.icon" alt="">
+  <span appGridItemTitle>{{ item.title }}</span>
+</div>

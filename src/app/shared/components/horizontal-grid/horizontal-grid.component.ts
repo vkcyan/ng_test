@@ -1,31 +1,66 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { Emoji, confirmable } from "../../decorators";
 
+export interface channel {
+  id: string;
+  icon: string;
+  title: string;
+  link: string;
+}
 @Component({
   selector: "app-horizontal-grid",
   templateUrl: "./horizontal-grid.component.html",
   styleUrls: ["./horizontal-grid.component.css"],
 })
 export class HorizontalGridComponent implements OnInit {
-  @Input() username: string = "";
-  @Output() usernameChange = new EventEmitter();
-  @Emoji() emojiData: string = "表情";
-  constructor() {}
-
-  ngOnInit() {}
-
-  // public get username(): string {
-  //   return this._username;
-  // }
-  // public set username(value: string) {
-  //   this._username = value;
-  // }
-
-  changeUserName(ev) {
-    console.log(ev);
-  }
-  @confirmable('您确认要执行嘛')
-  modelUserName(value: string): void {
-    this.usernameChange.emit(value);
-  }
+  channels: channel[] = [
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+    {
+      id: "",
+      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
+      title: "第一",
+      link: "11",
+    },
+  ];
+  ngOnInit(): void {}
 }
