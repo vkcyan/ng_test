@@ -1,66 +1,25 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
-export interface channel {
-  id: string;
-  icon: string;
-  title: string;
-  link: string;
-}
 @Component({
   selector: "app-horizontal-grid",
   templateUrl: "./horizontal-grid.component.html",
-  styleUrls: ["./horizontal-grid.component.css"],
+  styleUrls: ["./horizontal-grid.component.scss"],
 })
 export class HorizontalGridComponent implements OnInit {
-  channels: channel[] = [
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-    {
-      id: "",
-      icon: "https://images.591wsh.com/2020/07/07/22818688107286528.png",
-      title: "第一",
-      link: "11",
-    },
-  ];
+  @Input() cols = 7;
+  @Input() displayCols = 5;
+  sliderMargin = `0 0`;
   ngOnInit(): void {}
+  get scrollable(): boolean {
+    return this.cols > this.displayCols;
+  }
+  get templateRows(): string {
+    return "minmax(auto, max-content)";
+  }
+  get templateolums(): string {
+    return `repeat(${this.cols},calc((100vw - ${this.displayCols + 0.4}rem)/${this.displayCols}))`;
+  }
+  handScroll(event) {
+    this.sliderMargin = `0 ${(100 * event.target.scrollLeft) / event.target.scrollWidth}%`;
+  }
 }

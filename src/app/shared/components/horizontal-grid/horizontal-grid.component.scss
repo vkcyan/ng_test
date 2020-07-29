@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.containers {
+  background-color: white;
+  padding: 5px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  display: grid;
+  place-content: stretch;
+  place-items: center;
+  grid-gap: 0.4rem;
+  grid-auto-flow: row;
+}

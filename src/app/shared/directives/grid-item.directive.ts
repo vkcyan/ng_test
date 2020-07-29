@@ -1,13 +1,13 @@
-import { Directive, ElementRef, Renderer2 } from "@angular/core";
+import { Directive, ElementRef, Renderer2, HostBinding } from "@angular/core";
 
 @Directive({
   selector: "[appGridItem]",
 })
 export class GridItemDirective {
-  constructor(private elr: ElementRef, private rd2: Renderer2) {
-    this.rd2.setStyle(this.elr.nativeElement, "display", "grid");
-    this.rd2.setStyle(this.elr.nativeElement, "grid-template-areas", `'image' 'title'`);
-    this.rd2.setStyle(this.elr.nativeElement, "place-items", "center");
-    this.rd2.setStyle(this.elr.nativeElement, "width", "4rem");
-  }
+  // HostBinding 这个指令用于样式数据的绑定
+  @HostBinding("style.flex-shrink") flexShrink = "0";
+  @HostBinding("style.display") display = "grid";
+  @HostBinding("style.grid-template-areas") gridTemplateAreas = `'image' 'title'`;
+  @HostBinding("style.place-items") placeItems = "center";
+  @HostBinding("style.width") width = "4rem";
 }

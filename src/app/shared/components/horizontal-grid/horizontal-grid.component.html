@@ -1,4 +1,20 @@
-<div appGridItem *ngFor="let item of channels">
-  <img appGridItemImage [imageSize]="'2rem'" [src]="item.icon" alt="">
-  <span appGridItemTitle>{{ item.title }}</span>
+<!-- 标签插槽 -->
+<!-- <ng-content select="span"></ng-content> -->
+<!-- 指令插槽 -->
+<!-- <ng-content select="[appGridItem]"></ng-content> -->
+<!-- 选择器插槽 -->
+<!-- <ng-content select=".add"></ng-content> -->
+
+<div
+  class="containers"
+  [ngStyle]="{
+    'grid-template-rows': templateRows,
+    'grid-template-columns': templateolums
+  }"
+  (scroll)="handScroll($event)"
+>
+  <ng-content select="[appGridItem]"></ng-content>
+</div>
+<div class="runderline" *ngIf="scrollable">
+  <div class="hinglight" [ngStyle]="{'margin': sliderMargin}"></div>
 </div>
