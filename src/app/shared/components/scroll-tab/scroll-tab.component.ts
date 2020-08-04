@@ -55,6 +55,7 @@ export class ScrollTabComponent implements OnInit, OnChanges, DoCheck {
     console.log("页面卸载.进行内存的一些清理");
   }
   toggleSelect(index: number) {
+    console.log('子组件点击',index);
     this.tabSelectd.emit(index);
   }
 }

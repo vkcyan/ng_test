@@ -1,15 +1,15 @@
 <ul class="header_con">
   <li class="item" *ngFor="let item of tabs; let index = index; let first = first; let last = last; let even = even; let odd = odd">
-    <a
-      href="#"
+    <div
       [class.active]="index === selectId"
       [class.first]="first"
       [class.last]="last"
       [class.odd]="odd"
       [class.even]="even"
       (click)="toggleSelect(index)"
-      >{{ item.title }}</a
     >
+      {{ item.title }}
+    </div>
     <span class="label" *ngIf="index === selectId"></span>
     <!-- <ng-template #noselectId>
       <span>nihao</span>
