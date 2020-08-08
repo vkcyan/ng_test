@@ -12,3 +12,16 @@
     <span appGridItemTitle>{{ item.title }}</span>
   </div>
 </app-horizontal-grid>
+
+<!-- routerLink为跳转表示 -->
+<a [routerLink]="['grand']">跳转</a>
+<!-- routerLinkActive 如果是当前路由 css类名 就会生效 -->
+<!-- [queryParams]="{ data: 1111, dddd: 22 }" -->
+<a [routerLink]="['grand']" routerLinkActive="router_active">name</a>
+<!--  -->
+<a [routerLink]="[{ outlets: { zore: ['aux'] } }]">同级容器</a>
+
+<!-- 主要插座 -->
+<router-outlet></router-outlet>
+<!-- 具名插座 -->
+<router-outlet name="zore"></router-outlet>

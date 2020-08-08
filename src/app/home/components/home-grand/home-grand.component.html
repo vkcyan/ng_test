@@ -1,0 +1,6 @@
+<P> json格式化管道 {{ obj | json }}</P>
+<p>时间管道 {{ date | date: "yyyy-MM-dd HH:mm:ss" }}</p>
+<!-- currency为价格格式化管道 参数symbol 中 5为最小几位数 5为小数最小几位数 10 小数最大几位数 -->
+<p>价格{{ price | currency: "CNY":"symbol":"5.5-10" }}</p>
+<p>切割 {{ dataSlice | slice: 1:3 }}11</p>
+<p>自定义管道 {{ date | appAge }}</p>

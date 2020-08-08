@@ -7,6 +7,7 @@ import { HorizontalGridComponent } from "./components/horizontal-grid/horizontal
 import { GridItemDirective } from "./directives/grid-item.directive";
 import { GridItemImageDirective } from "./directives/grid-item-image.directive";
 import { GridItemTitleDirective } from "./directives/grid-item-title.directive";
+import { AgoPipe } from "./pips/ago.pipe";
 @NgModule({
   declarations: [
     ScrollTabComponent,
@@ -15,6 +16,7 @@ import { GridItemTitleDirective } from "./directives/grid-item-title.directive";
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
+    AgoPipe,
   ],
   imports: [CommonModule, FormsModule],
   exports: [
@@ -26,6 +28,7 @@ import { GridItemTitleDirective } from "./directives/grid-item-title.directive";
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
+    AgoPipe,
   ],
 })
 export class SharedModule {}
