@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges, DoCheck } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges, DoCheck, ChangeDetectionStrategy } from "@angular/core";
 
 export interface menuInter {
   title: string;
@@ -8,6 +8,7 @@ export interface menuInter {
   selector: "app-scroll-tab",
   templateUrl: "./scroll-tab.component.html",
   styleUrls: ["./scroll-tab.component.scss"],
+  changeDetection:ChangeDetectionStrategy.OnPush // 只会监听@input变化的情况下才会进行脏值检测
 })
 export class ScrollTabComponent implements OnInit, OnChanges, DoCheck {
   constructor() {

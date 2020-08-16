@@ -5,12 +5,13 @@ import { HomeContainerComponent } from "./components/home-container/home-contain
 import { HomeDetailComponent } from "./components/home-detail/home-detail.component";
 import { HomeGrandComponent } from "./components/home-grand/home-grand.component";
 import { HomeAuxComponent } from "./components/home-aux/home-aux.component";
-import { HomeService } from "./services/home.service";
+import { ChildComponent } from "./components/child/child.component";
+import { ParentComponent } from "./components/parent/parent.component";
 
 export const token = new InjectionToken<string>("baseUrl");
 
 @NgModule({
-  declarations: [HomeContainerComponent, HomeDetailComponent, HomeGrandComponent, HomeAuxComponent],
+  declarations: [HomeContainerComponent, HomeDetailComponent, HomeGrandComponent, HomeAuxComponent, ChildComponent, ParentComponent],
   providers: [
     // HomeService,
     {
