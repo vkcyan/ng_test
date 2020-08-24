@@ -3,11 +3,17 @@ import { menuInter } from "src/app/shared/components/scroll-tab/scroll-tab.compo
 import { channel } from "src/app/app.component";
 import { ImageSlider } from "src/app/shared/components/swiper/swiper.component";
 import { HomeModule } from "../home.module";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root",
 })
 export class HomeService {
+  constructor(private http: HttpClient) {
+    this.http.get("http://192.168.1.111:8000/api/uc/shopInfo/info", { params: { aaa: "11" } }).subscribe((res) => {
+      console.log(res);
+    });
+  }
   private tabs: menuInter[] = [
     {
       title: "热门",

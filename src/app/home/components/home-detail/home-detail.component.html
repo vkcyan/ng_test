@@ -1,10 +1,10 @@
-<div *ngIf="tablink == '11'">
+<div *ngIf="(tablink$ | async) == '11'">
   url为11
 </div>
-<div *ngIf="tablink == '22'">url为22</div>
-<div *ngIf="tablink == '33'">url为33</div>
-<div *ngIf="tablink == '44'">url为44</div>
-<div *ngIf="tablink == '55'">url为55</div>
+<div *ngIf="(tablink$ | async) == '22'">url为22</div>
+<div *ngIf="(tablink$ | async) == '33'">url为33</div>
+<div *ngIf="(tablink$ | async) == '44'">url为44</div>
+<div *ngIf="(tablink$ | async) == '55'">url为55</div>
 <app-swiper [sliders]="sliders"></app-swiper>
 <app-horizontal-grid>
   <div class="add" appGridItem *ngFor="let item of channels">
