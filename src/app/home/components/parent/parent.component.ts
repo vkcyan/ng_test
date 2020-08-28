@@ -9,4 +9,6 @@ export class ParentComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  startDate = new Date("2020-8-29");
+  futurDate = new Date("2020-9-20");
 }

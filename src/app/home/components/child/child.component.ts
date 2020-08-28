@@ -22,7 +22,7 @@ export class ChildComponent implements OnInit {
         console.log("改变");
         this._title = "改变";
         this.rd2.setProperty(this.timeRef.nativeElement, "innerText", formatDate(Date.now(), "HH:mm:ss:SSS", "zh-Hans"));
-      }, 100);
+      }, 1000);
     });
   }
   handleClick() {}
